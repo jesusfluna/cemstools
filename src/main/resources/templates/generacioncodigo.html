@@ -1,0 +1,35 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>CEMS Tools</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:insert="shareds/bootstrapCDN.html">  
+<body class="text-center">
+	<link th:insert="shareds/header.html"> 
+	<div style="margin-top: 5%;" class="text-center">
+		<img class="mb-4" th:src="@{/images/inerco_ico.png}" alt="Inerco_ico" width="72" height="72">
+		<h1>CEMS Tools APP</h1>
+
+		<div class="card text-center" style="padding: 2%; width: 40%; margin-left: 30%; margin-right: 30%">
+			<div class="card-body text-center">
+				<form action="#" th:action="@{/cemstools/uploadFile}" method="post" enctype="multipart/form-data">
+		            <div class="mb-3">
+					  <label for="formFile" class="form-label">Procesamiento de ficheros</label>
+					  <input class="form-control" type="file" id="formFile" name="file">
+					</div>
+					<select class="form-select" aria-label="Default select" name="opcion">
+					  <option value="1" selected>ALARMAS_SAM</option>
+					  <option value="2">CONFIGURACION_SIST</option>
+					  <option value="3">CONFIGURACION_WEB</option>
+					  <option value="4">DATOS_PC_CTL_DB</option>
+					</select>
+		            <div class="d-grid gap-2" style="padding-top: 2%">
+						<button class="btn btn-success" type="submit">Enviar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

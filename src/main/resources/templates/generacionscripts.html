@@ -1,0 +1,67 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>CEMS Tools</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:insert="shareds/bootstrapCDN.html">  
+<body class="text-center">
+	<link th:insert="shareds/header.html"> 
+	<div style="margin-top: 5%;" class="text-center">
+		<img class="mb-4" th:src="@{/images/inerco_ico.png}" alt="Inerco_ico" width="72" height="72">
+		<h1>CEMS Tools APP</h1>
+
+		<div class="card text-center" style="padding: 2%; width: 40%; margin-left: 30%; margin-right: 30%">
+			<div class="card-body text-center">
+				<form action="#" th:action="@{/cemstools/genscripts}" method="post" th:object="${databaseForm}">
+		            <div class="form-floating">
+			    	  <input type="text" class="form-control" id="floatingInput" placeholder="Bdd name" th:field="*{nombre}">
+				      <label for="floatingInput">Bdd Nombre</label>
+				    </div><br>
+		    
+		    		<div class="form-floating">
+			    	  <input type="text" class="form-control" id="floatingInput" placeholder="Bdd ID" th:field="*{id}">
+				      <label for="floatingInput">Bdd ID</label>
+				    </div><br>
+				    
+				    <select class="form-select" aria-label="Default select" name="opcion" th:field="*{numEstaciones}">
+					  <option value="1" selected>1 Estacion</option>
+					  <option value="2">2 Estaciones</option>
+					  <option value="3">3 Estaciones</option>
+					  <option value="4">4 Estaciones</option>
+					  <option value="5">5 Estaciones</option>
+					</select>
+		    		
+		    		<div style="padding-top: 5%">
+			    		<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox1" th:field="*{sustitucion}">
+						  <label class="form-check-label" for="inlineCheckbox1">Sustitución</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox2" th:field="*{replicacion}">
+						  <label class="form-check-label" for="inlineCheckbox2">Replicación</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox3" th:field="*{linealidad}">
+						  <label class="form-check-label" for="inlineCheckbox3">Linealidad</label>
+						</div>
+						<div class="form-check form-check-inline">
+						  <input class="form-check-input" type="checkbox" id="inlineCheckbox4" th:field="*{horarios}">
+						  <label class="form-check-label" for="inlineCheckbox4">Horarios</label>
+						</div>
+		    		</div>
+		    
+					<div class="form-check form-switch" style="margin-top: 2%">
+					  <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckChecked" checked th:field="*{unknown}">
+					  <label class="form-check-label" for="flexSwitchCheckChecked">Establecer parametros Unknown</label>
+					</div>
+		    
+		            <div class="d-grid gap-2" style="padding-top: 3%">
+						<button class="btn btn-success" type="submit">Generar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

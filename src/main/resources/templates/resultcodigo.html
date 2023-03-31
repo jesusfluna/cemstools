@@ -1,0 +1,39 @@
+ <!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>CEMS Tools</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link th:insert="shareds/bootstrapCDN.html">  
+    <link th:insert="shareds/javascript.html"> 
+    <style type="text/css">
+    .testClass{
+		   white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
+		    white-space: -pre-wrap; /* Opera */
+		    white-space: -o-pre-wrap; /* Opera */
+		    white-space: pre-wrap; /* CSS3 - Text module (Candidate Recommendation) http://www.w3.org/TR/css3-text/#white-space */
+		    word-wrap: break-word; /* IE 5.5+ */
+		}
+	</style>
+</head>
+    
+<body class="text-center">
+ <h2 style="margin-top: 5%">Texto generado:</h2>	
+
+	<div th:if="${ error }">
+		<div align="center" class="alert alert-danger mt-5">
+		    <h2>ERROR!, Se ha encontrado un error procesando la información </h2>
+		</div>
+		<a class="btn btn-outline-success" href="/cemstools/" role="button">Volver</a>
+	</div>
+
+	<div th:if="${ !error }" style="margin-top: 2%">
+			<a class="btn btn-outline-success" href="/cemstools/" role="button">Volver</a>
+			<!--  <button type="button" class="btn btn-outline-success" onclick="copiarAlPortapapeles('copyButton')">Copiar todo</button> -->
+			
+			<div align="left" class="alert alert-success mt-5" style="margin-left: 2%; margin-right: 2%;">
+	   			 <pre th:text="${text}" id="copyButton" class="testClass"></pre>
+			</div>
+	</div>
+
+</body>
+</html>

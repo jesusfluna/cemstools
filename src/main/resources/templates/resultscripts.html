@@ -4,16 +4,7 @@
     <title>CEMS Tools</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:insert="shareds/bootstrapCDN.html">  
-    <script type="text/javascript">
-	    function copiarAlPortapapeles(id_elemento) {
-	    	  var aux = document.createElement("input");
-	    	  aux.setAttribute("value", document.getElementById(id_elemento).innerHTML);
-	    	  document.body.appendChild(aux);
-	    	  aux.select();
-	    	  document.execCommand("copy");
-	    	  document.body.removeChild(aux);
-    	}
-    </script>
+    <link th:insert="shareds/javascript.html"> 
     <style type="text/css">
     .testClass{
 		   white-space: -moz-pre-wrap; /* Mozilla, supported since 1999 */
@@ -30,14 +21,14 @@
 
 	<div th:if="${ error }">
 		<div align="center" class="alert alert-danger mt-5">
-		    <h2>ERROR!, Se ha encontrado un error procesando el fichero de texto </h2>
+		    <h2>ERROR!, Se ha encontrado un error procesando el formulario </h2>
 		</div>
 		<a class="btn btn-outline-success" href="/cemstools/" role="button">Volver</a>
 	</div>
 
 	<div th:if="${ !error }" style="margin-top: 2%">
 			<a class="btn btn-outline-success" href="/cemstools/" role="button">Volver</a>
-			<button type="button" class="btn btn-outline-success" onclick="copiarAlPortapapeles('copyButton')">Copiar todo</button>
+			<!--  <button type="button" class="btn btn-outline-success" onclick="copiarAlPortapapeles('copyButton')">Copiar todo</button> -->
 			
 			<div align="left" class="alert alert-success mt-5">
 	   			 <pre th:text="${text}" id="copyButton" class="testClass"></pre>
