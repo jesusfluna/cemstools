@@ -4,6 +4,8 @@
     <title>CEMS Tools</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link th:insert="shareds/bootstrapCDN.html">  
+	<!-- Bootstrap fileStyle -->
+
 <body class="text-center">
 	<link th:insert="shareds/header.html"> 
 	<div style="margin-top: 5%;" class="text-center">
@@ -14,8 +16,9 @@
 			<div class="card-body text-center">
 				<form action="#" th:action="@{/cemstools/uploadFile}" method="post" enctype="multipart/form-data">
 		            <div class="mb-3">
-					  <label for="formFile" class="form-label">Procesamiento de ficheros</label>
-					  <input class="form-control" type="file" id="formFile" name="file">
+					  <label for="formFile" class="form-label" th:text="#{message.gencode.procesar}"></label>
+					  <input class="form-control" type="file" id="formFile" name="file" data-iconName="fa fa-upload" required>
+					  
 					</div>
 					<select class="form-select" aria-label="Default select" name="opcion">
 					  <option value="1" selected>ALARMAS_SAM</option>
@@ -24,7 +27,7 @@
 					  <option value="4">DATOS_PC_CTL_DB</option>
 					</select>
 		            <div class="d-grid gap-2" style="padding-top: 2%">
-						<button class="btn btn-success" type="submit">Enviar</button>
+						<button class="btn btn-success" type="submit" th:text="#{message.btn.gen}"></button>
 					</div>
 				</form>
 			</div>

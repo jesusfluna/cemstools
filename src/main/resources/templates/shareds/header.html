@@ -11,10 +11,16 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/cemstools/gencode">Gen. codigo</a>
-        <a class="nav-link active" aria-current="page" href="/cemstools/bddscripts">BDD Scripts</a>
-        <a class="nav-link disabled">Proximamente</a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/gencode" th:text="#{message.header.opc1}">Gen. codigo</a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/bddscripts" th:text="#{message.header.opc2}">BDD Scripts</a>
+        <a class="nav-link disabled" th:text="#{message.header.opc3}">Proximamente</a>
       </div>
     </div>
+    
+    <span class="idiomas" style="margin-right: 3%">
+		<a th:href="|@{/}?lang=es|"><img th:src="@{/images/espana.png}" width="35" height="30" alt="Español"></a>
+		<a th:href="|@{/}?lang=it|"><img th:src="@{/images/italia.png}" width="35" height="30" alt="Italiano"></a>
+		<a th:href="|@{/}?lang=en|"><img th:src="@{/images/english.png}" width="35" height="30" alt="English"></a>
+	</span>
   </div>
 </nav>
