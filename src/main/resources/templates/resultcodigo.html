@@ -3,7 +3,7 @@
 <head> 
     <title>CEMS Tools</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:insert="shareds/bootstrapCDN.html">  
+    <link th:insert="shareds/CDN.html">  
     <link th:insert="shareds/javascript.html"> 
     <style type="text/css">
     .testClass{
@@ -17,6 +17,7 @@
 </head>
     
 <body class="text-center">
+<link th:insert="shareds/header.html">
  <h2 style="margin-top: 5%">Texto generado:</h2>	
 
 	<div th:if="${ error }">

@@ -3,7 +3,7 @@
 <head> 
     <title>CEMS Tools</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:insert="shareds/bootstrapCDN.html">  
+    <link th:insert="shareds/CDN.html">  
 <body class="text-center">
 	<link th:insert="shareds/header.html"> 
 	<div style="margin-top: 5%;" class="text-center">
@@ -16,9 +16,11 @@
 				<div  th:text="#{message.index.inicio}"></div>
 				
 		        <div class="d-grid gap-2" style="padding-top: 5%">
-					<a class="btn btn-success" href="/cemstools/gencode" role="button" th:text="#{message.index.btn1}"></a>
-					<a class="btn btn-success" href="/cemstools/bddscripts" role="button" th:text="#{message.index.btn2}"></a>
-					<a class="btn btn-success disabled" href="/cemstools/genscripts" role="button" th:text="#{message.index.btn3}"></a>
+					<a class="btn btn-success" href="/cemstools/gencode" role="button" th:text="#{message.btn.btn1}"></a>
+					<a class="btn btn-success" href="/cemstools/bddscripts" role="button" th:text="#{message.btn.btn2}"></a>
+					<a class="btn btn-success" href="/cemstools/genstagscfg" role="button" th:text="#{message.btn.btn3}"></a>
+					<a class="btn btn-success" href="/cemstools/genmmplclocalweb" role="button" th:text="#{message.btn.btn4}"></a>
+					<a class="btn btn-success disabled" href="/cemstools/genscripts" role="button" th:text="#{message.index.btn}"></a>
 				</div>
 			</div>
 		</div>

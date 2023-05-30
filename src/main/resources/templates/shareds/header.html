@@ -1,5 +1,4 @@
-
-
+<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="/cemstools/">
@@ -11,9 +10,11 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="/cemstools/gencode" th:text="#{message.header.opc1}">Gen. codigo</a>
-        <a class="nav-link active" aria-current="page" href="/cemstools/bddscripts" th:text="#{message.header.opc2}">BDD Scripts</a>
-        <a class="nav-link disabled" th:text="#{message.header.opc3}">Proximamente</a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/gencode" th:text="#{message.btn.btn1}"></a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/bddscripts" th:text="#{message.btn.btn2}"></a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/genstagscfg" th:text="#{message.btn.btn3}"></a>
+        <a class="nav-link active" aria-current="page" href="/cemstools/genstagscfg" th:text="#{message.btn.btn4}"></a>
+        <a class="nav-link disabled" th:text="#{message.index.btn}"></a>
       </div>
     </div>
     

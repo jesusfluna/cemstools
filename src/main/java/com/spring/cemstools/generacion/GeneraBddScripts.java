@@ -2,10 +2,10 @@ package com.spring.cemstools.generacion;
 
 import com.spring.cemstools.models.databaseForm;
 
-public class BddScripts {
+public class GeneraBddScripts {
 	private databaseForm database;
 
-	public BddScripts(databaseForm database) {
+	public GeneraBddScripts(databaseForm database) {
 		super();
 		this.database = database;
 		

@@ -3,7 +3,7 @@
 <head> 
     <title>CEMS Tools</title> 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <link th:insert="shareds/bootstrapCDN.html">  
+    <link th:insert="shareds/CDN.html">  
 <body class="text-center">
 	<link th:insert="shareds/header.html"> 
 	<div style="margin-top: 5%;" class="text-center">
@@ -24,11 +24,11 @@
 				    </div><br>
 				    
 				    <select class="form-select" aria-label="Default select" name="opcion" th:field="*{numEstaciones}">
-					  <option value="1" selected th:text="1+#{message.gemscript.est}"></option>
-					  <option value="2" th:text="2+#{message.gemscript.ests}"></option>
-					  <option value="3" th:text="3+#{message.gemscript.ests}"></option>
-					  <option value="4" th:text="4+#{message.gemscript.ests}"></option>
-					  <option value="5" th:text="5+#{message.gemscript.ests}"></option>
+					  <option value="1" selected th:text="1+' '+#{message.gemscript.est}"></option>
+					  <option value="2" th:text="2+' '+#{message.gemscript.ests}"></option>
+					  <option value="3" th:text="3+' '+#{message.gemscript.ests}"></option>
+					  <option value="4" th:text="4+' '+#{message.gemscript.ests}"></option>
+					  <option value="5" th:text="5+' '+#{message.gemscript.ests}"></option>
 					</select>
 		    		
 		    		<div style="padding-top: 5%">
